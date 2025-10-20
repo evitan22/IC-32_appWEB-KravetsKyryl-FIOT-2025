@@ -1,145 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books.ua</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Books.ua</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <div>
-            <ul style="list-style-type: none;">
-                <li><a href="#about">Про нас</a></li>
-                <li><a href="#promotions">Акції</a></li>
-                <li><a href="#authors">Автори</a></li>
-                <li><a href="#publishers">Видавництва</a></li>
-            </ul>
-            <div>
-                <button>Зареєструватись</button>
-                <button>Увійти</button>
-            </div>
+  <header class="siteHeader">
+    <div class="topbar">
+      <nav class="firstButtons">
+        <a href="#about">Про нас</a>
+        <a href="#promotions">Акції</a>
+        <a href="#authors">Автори</a>
+        <a href="#publishers">Видавництва</a>
+      </nav>
+      <div class="authentication">
+        <button class="btn goIn">Увійти</button>
+        <button class="btn registration">Зареєструватись</button>
+      </div>
+    </div>
+
+    <div class="headerMain">
+      <div class="brand">
+        <img src="./images/Logo.png" alt="Books.ua" class="logo-img">
+        <div class="catalog">
+          <button class="btn catalogImage">📚</button>
+          <button class="btn catalogText">Каталог</button>
         </div>
+      </div>
 
-        <div>
-            <div>
-                <img src="./images/Logo.png"> 
-                <div>
-                    <button>📗</button>
-                    <button>Каталог</button> 
-                </div>
-            </div>
+      <div class="searchWrap">
+        <form class="searchForm">
+          <input id="q" class="searchInput" placeholder="Я шукаю..." />
+          <button class="searchImage">🔍</button>
+        </form>
+      </div>
 
-            <div>
-                <form>
-                    <label>Пошук</label>
-                    <input placeholder="Я шукаю..." />
-                    <button>🔍</button>
-                </form>
-            </div>
+      <div class="icons">
+        <a href="/account" class="icon">👤</a>
+        <a href="/favorites" class="icon">❤</a>
+        <a href="/cart" class="icon">🛒</a>
+      </div>
+    </div>
+  </header>
 
-            <div>
-                <a>👤</a>
-                <a>❤</a>
-                <a>🛒</a>
-            </div>
+  <main>
+    <section class="collections">
+      <img class="collectionsImage" src="./images/booksShelf.jpg" alt="Кращі колекції українських авторів">
+      <h1 class="collectionsTitle">Кращі колекції<br>українських авторів</h1>
+    </section>
+
+    <section class="bestSeller container">
+      <h2 class="sectionTitle">Best-seller</h2>
+
+      <div class="booksGrid">
+        <article class="bookCard">
+          <img src="./images/GarryPotter.jpg" alt="Гаррі Поттер. Філософський камінь" class="bookCover">
+          <h3 class="bookTitle">Гаррі Потер. Філософський камінь.</h3>
+          <p class="booksAuthor">Дж. К. Ролінґ</p>
+        </article>
+
+        <article class="bookCard">
+          <img src="./images/GameOfTrones.jpg" alt="Гра престолів" class="bookCover">
+          <h3 class="bookTitle">Гра престолів</h3>
+          <p class="booksAuthor">Джордж Р. Р. Мартін</p>
+        </article>
+
+        <article class="bookCard">
+          <img src="./images/nineteenth.jpg" alt="1984" class="bookCover">
+          <h3 class="bookTitle">1984</h3>
+          <p class="booksAuthor">Дж. Орвелл</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalogTable container">
+      <table class="booksTable" summary="Список бестселерів з цінами та наявністю">
+        <thead>
+          <tr>
+            <th>Назва</th>
+            <th>Автор</th>
+            <th>Жанр</th>
+            <th>Ціна</th>
+            <th>Наявність</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Гаррі Поттер і філософський камінь</td>
+            <td>Дж. К. Ролінґ</td>
+            <td>Фентезі</td>
+            <td>350 грн</td>
+            <td class="inStock">Є в наявності</td>
+          </tr>
+          <tr>
+            <td>Гра престолів</td>
+            <td>Джордж Р. Р. Мартін</td>
+            <td>Фентезі</td>
+            <td>420 грн</td>
+            <td class="inStock">Є в наявності</td>
+          </tr>
+          <tr>
+            <td>1984</td>
+            <td>Джордж Орвелл</td>
+            <td>Антиутопія</td>
+            <td>280 грн</td>
+            <td class="outOfStock">Немає в наявності</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerInner container">
+      <div class="footerLeft">
+        <!-- <a href="/" class="footer-logo"> -->
+        <img src="./images/Logo.png" alt="Books.ua" class="logoImage small">
+        <!-- </a> -->
+        <div class="contacts">
+          <h4>Гаряча лінія</h4>
+          <p>+380 50 821 94 03</p>
+          <p>Пн-Сб 9:00-18:00</p>
+          <p>Email: <a href="mailto:support@book.ua">support@book.ua</a></p>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <div>
-            <img>
-            <h2></h2>
-        </div>
+      <div class="footerRight">
+        <h4 class="registrationFormText">Реєстрація</h4>
+        <form class="registrationForm" action="/register" method="post">
+          <label class="label">Пошта</label>
+          <input id="email" type="email" required class="input">
 
-        <div>
-            <h3>Best-seller</h3>
+          <label class="label">Пароль</label>
+          <input id="password" type="password" required class="input">
 
-            <div id="books">
-                <div>
-                    <img src="./images/GarryPotter.jpg" alt="Обкладинка Гаррі Поттер. Філософський камінь" width="150" />
-                    <h4>Гаррі Потер. Філософський камінь.</h4>
-                    <p>Дж. К. Ролінґ</p>
-                </div>
+          <button type="submit" class="btn registration">Зареєструватись</button>
+        </form>
+      </div>
+    </div>
+    <div class="copyright">
+      <span id="year"></span> Books.ua
+    </div>
+  </footer>
 
-                <div>
-                    <img src="./images/GameOfTrones.jpg" alt="Обкладинка Гра престолів" width="150" />
-                    <h4>Гра престолів</h4>
-                    <p>Джордж Р. Р. Мартін</p>
-                </div>
-
-                <div>
-                    <img src="./images/nineteenth.jpg" alt="Обкладинка 1984" width="150" />
-                    <h4>1984</h4>
-                    <p>Дж. Орвелл</p>
-                </div>
-            </div>
-        </div>
-
-        <table border="1" cellpadding="10" cellspacing="0" align="center">
-            <thead>
-                <tr bgcolor="#f2f2f2">
-                    <th>Назва</th>
-                    <th>Автор</th>
-                    <th>Жанр</th>
-                    <th>Ціна</th>
-                    <th>Наявність</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Гаррі Поттер і філософський камінь</td>
-                    <td>Дж. К. Ролінґ</td>
-                    <td>Фентезі</td>
-                    <td>350 грн</td>
-                    <td>Є в наявності</td>
-                </tr>
-                <tr>
-                    <td>Гра престолів</td>
-                    <td>Джордж Р. Р. Мартін</td>
-                    <td>Фентезі</td>
-                    <td>420 грн</td>
-                    <td>Є в наявності</td>
-                </tr>
-                <tr>
-                    <td>1984</td>
-                    <td>Джордж Орвелл</td>
-                    <td>Антиутопія</td>
-                    <td>280 грн</td>
-                    <td>Немає в наявності</td>
-                </tr>
-            </tbody>
-        </table>
-    </main> 
-
-    <footer>
-        <div>
-            <div>
-                <img src="./images/Logo.png"> 
-                <div>
-                    <h4>Гаряча лінія</h4>
-                    <p>+380 50 821 94 03</p>
-                    <p>Пн-Сб 9:00-18:00</p>
-                    <p>Email: <a href="mailto:support@book.ua">support@book.ua</a></p>
-                </div>
-            </div>
-
-            <div>
-                <h4>Реєстрація</h4>
-                <form>
-                    <div>
-                        <label>Пошта</label><br />
-                        <input type="email" required />
-                    </div>
-                    <div>
-                        <label>Пароль</label><br />
-                        <input type="password" required />
-                    </div>
-                    <div>
-                        <button>Зареєструватись</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
