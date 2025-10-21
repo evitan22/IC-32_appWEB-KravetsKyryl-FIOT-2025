@@ -153,7 +153,8 @@ html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; colo
   padding: 28px 0;
 }
 .footerInner {
-  display:flex;
+  display: grid;
+  grid-template-columns: 300px 1fr;
   gap:40px;
   justify-content:space-between;
   align-items:flex-start;
@@ -164,7 +165,12 @@ html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; colo
 .footerLeft { display:flex; gap:18px; align-items:flex-start; }
 .contacts h4 { margin-bottom:8px; font-size:16px; }
 .contacts p { margin-bottom:6px; color:#333; }
-.footerRight { max-width:320px; }
+
+.footerRight {
+    width: 320px;
+    margin: 0 auto;
+}
+
 .registrationForm { display:flex; flex-direction:column; gap:10px; }
 .input { padding:8px; border:1px solid #ddd; border-radius:6px; }
 
@@ -177,4 +183,33 @@ html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; colo
 
 .registrationFormText {
     text-align: center;
+}
+
+@media (max-width: 767px) {
+    .header-burger {
+        width: 30px;
+        display: grid;
+        align-items: center;
+        grid-template: repeat(3, 8px) / 1fr;
+    }
+
+    .header-burger::before {
+        content: "";
+        height: 2px;
+        width: 30px;
+        background-color: #000;
+    }
+
+    .header-burger::after {
+        content: "";
+        height: 2px;
+        width: 30px;
+        background-color: #000;
+    }
+
+    .header-burger span {
+        height: 2px;
+        width: 30px;
+        background-color: #000;
+    }
 }
