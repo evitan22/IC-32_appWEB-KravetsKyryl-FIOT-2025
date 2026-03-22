@@ -10,13 +10,26 @@
   --accent-dark: #7fb43f;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; color: var(--text); background: #fafafa; }
+
+.burgerMenu {
+  display: none;
+  width: 40px;
+}
+
+.iconHuman {
+  display: none;
+}
 
 .container {
   max-width: var(--maxwidth);
   margin: 0 auto;
-  padding: 30px var(--container-margin);
 }
 
 .siteHeader {
@@ -62,8 +75,12 @@ html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; colo
 }
 
 .brand { display:flex; align-items:center; gap:14px; }
-.logoImage { height:54px; width:auto; display:block; }
-.logoImage.small { height:44px; }
+.logoImage { 
+  height: 44px; 
+  width:auto; 
+  display:block; 
+  margin-inline: auto;
+}
 
 .catalog { display:flex; gap:8px; align-items:center; }
 .catalog .catalogImage { background:#e6f3de; border-radius:6px; padding:8px; }
@@ -113,8 +130,17 @@ html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; colo
   pointer-events:none;
 }
 
-.bestSeller { padding: 48px 0; }
-.sectionTitle { font-size:34px; margin-bottom: 28px; font-family: Georgia, "Times New Roman", serif; color:#111; }
+.bestSeller { 
+  padding: 48px 0; 
+}
+
+.sectionTitle { 
+  font-size:34px; 
+  margin-bottom: 28px; 
+  font-family: Georgia, "Times New Roman", serif; 
+  color:#111;
+  text-align: center;
+ }
 
 .booksGrid {
   display:grid;
@@ -154,7 +180,7 @@ html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; colo
 }
 .footerInner {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap:40px;
   justify-content:space-between;
   align-items:flex-start;
@@ -162,9 +188,26 @@ html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; colo
   margin: 0 auto;
   padding: 0 var(--container-margin);
 }
-.footerLeft { display:flex; gap:18px; align-items:flex-start; }
-.contacts h4 { margin-bottom:8px; font-size:16px; }
-.contacts p { margin-bottom:6px; color:#333; }
+.footerLeft { 
+  display:flex; 
+  gap:18px; 
+  align-items:flex-start; 
+  flex-direction: column;
+}
+.contacts h4 { 
+  margin-bottom:8px; 
+  font-size:16px; 
+}
+
+.contacts p { 
+  margin-bottom:6px; 
+  color:#333; 
+}
+
+.contacts {
+  margin-inline: auto;
+  text-align: center;
+}
 
 .footerRight {
     width: 320px;
@@ -176,40 +219,49 @@ html,body { height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; colo
 
 .copyright {
   margin-top: 20px;
-  text-align: left;     
+  text-align: center;     
   color:#555;
-  margin-left: 230px;
 }
 
 .registrationFormText {
-    text-align: center;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
-    .header-burger {
-        width: 30px;
-        display: grid;
-        align-items: center;
-        grid-template: repeat(3, 8px) / 1fr;
-    }
+  .firstButtons {
+    display: none;
+  }
 
-    .header-burger::before {
-        content: "";
-        height: 2px;
-        width: 30px;
-        background-color: #000;
-    }
+  .burgerMenu {
+    display: block;
+  }
 
-    .header-burger::after {
-        content: "";
-        height: 2px;
-        width: 30px;
-        background-color: #000;
-    }
+  .headerMain {
+    flex-wrap: wrap;
+  }
 
-    .header-burger span {
-        height: 2px;
-        width: 30px;
-        background-color: #000;
-    }
+  .booksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerInner {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogTable {
+    padding-bottom: 0; 
+    overflow-x: scroll;
+    max-width: 100%;
+    margin: 0 auto 80px;
+  }
+}
+
+@media (max-width: 410px) {
+  .catalogText {
+    display: none;
+  }
+
+  .logo-box {
+    width: 149px;
+  }
 }
