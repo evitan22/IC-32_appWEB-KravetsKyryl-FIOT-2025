@@ -4,14 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Books.ua</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script/script.js" defer></script>
+  <script src="../script/accesButton.js" defer></script>
 </head>
 
 <body>
   <header class="siteHeader">
     <div class="topbar">
-      <img class="burgerMenu" src="images/BurgerMenu.png">
+      <img class="burgerMenu" src="../images/BurgerMenu.png">
       <nav class="firstButtons">
         <a href="#about">Про нас</a>
         <a href="#promotions">Акції</a>
@@ -19,15 +20,17 @@
         <a href="#publishers">Видавництва</a>
       </nav>
       <div class="authentication">
-        <button class="btn goIn">Увійти</button>
-        <button class="btn registration">Зареєструватись</button>
+        <a href="login.html" class="btn goIn">Увійти</a>
+        <a href="registration.html" class="btn registration">Зареєструватись</a>
+        <a href="profile.html" class="btn profile">Profile</a>
+        <button class="btn logOut">Log out</button>
       </div>
     </div>
 
     <div class="headerMain">
       <div class="brand">
         <div class="logo-box">
-          <img src="./images/Logo.png" alt="Books.ua" class="logo-img">
+          <img src="../images/Logo.png" alt="Books.ua" class="logo-img">
         </div>
         <div class="catalog">
           <button class="btn catalogImage">📚</button>
@@ -52,7 +55,7 @@
 
   <main>
     <section class="collections">
-      <img class="collectionsImage" src="./images/booksShelf.jpg" alt="Кращі колекції українських авторів">
+      <img class="collectionsImage" src="../images/booksShelf.jpg" alt="Кращі колекції українських авторів">
       <h1 class="collectionsTitle">Кращі колекції<br>українських авторів</h1>
     </section>
 
@@ -61,19 +64,19 @@
 
       <div class="booksGrid">
         <article class="bookCard">
-          <img src="./images/GarryPotter.jpg" alt="Гаррі Поттер. Філософський камінь" class="bookCover">
+          <img src="../images/GarryPotter.jpg" alt="Гаррі Поттер. Філософський камінь" class="bookCover">
           <h3 class="bookTitle">Гаррі Потер. Філософський камінь.</h3>
           <p class="booksAuthor">Дж. К. Ролінґ</p>
         </article>
 
         <article class="bookCard">
-          <img src="./images/GameOfTrones.jpg" alt="Гра престолів" class="bookCover">
+          <img src="../images/GameOfTrones.jpg" alt="Гра престолів" class="bookCover">
           <h3 class="bookTitle">Гра престолів</h3>
           <p class="booksAuthor">Джордж Р. Р. Мартін</p>
         </article>
 
         <article class="bookCard">
-          <img src="./images/nineteenth.jpg" alt="1984" class="bookCover">
+          <img src="../images/nineteenth.jpg" alt="1984" class="bookCover">
           <h3 class="bookTitle">1984</h3>
           <p class="booksAuthor">Дж. Орвелл</p>
         </article>
@@ -122,7 +125,7 @@
     <div class="footerInner container">
       <div class="footerLeft">
         <!-- <a href="/" class="footer-logo"> -->
-        <img src="./images/Logo.png" alt="Books.ua" class="logoImage small">
+        <img src="../images/Logo.png" alt="Books.ua" class="logoImage small">
         <!-- </a> -->
         <div class="contacts">
           <h4>Гаряча лінія</h4>
@@ -132,19 +135,6 @@
         </div>
       </div>
 
-      <div class="footerRight">
-        <h4 class="registrationFormText">Реєстрація</h4>
-        <form class="registrationForm" action="/register" method="post">
-          <label class="label">Пошта</label>
-          <input id="email" type="email" required class="input">
-
-          <label class="label">Пароль</label>
-          <input id="password" type="password" required class="input">
-
-          <button type="submit" class="btn registration">Зареєструватись</button>
-        </form>
-      </div>
-    </div>
     <div class="copyright">
       <span id="year"></span> Books.ua
     </div>

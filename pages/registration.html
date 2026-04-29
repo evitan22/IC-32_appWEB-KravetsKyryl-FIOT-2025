@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Books.ua</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script/script.js" defer></script>
+  <script src="../script/registration.js" defer></script>
+</head>
+
+<body>
+  <header class="siteHeader">
+  </header>
+
+  <main>
+    <div class="footerInner container">
+      <div class="footerRight" id="reg">
+        <h4 class="registrationFormText">Реєстрація</h4>
+        <form class="registrationForm">
+          <label class="label">Пошта</label>
+          <input id="email" type="text" name="email" required class="input">
+          <div class="error errorEmail">Invalid email</div>
+
+          <label class="label">Ім'я</label>
+          <input id="name" type="text" name="name" required class="input">
+
+          <label class="label">Пароль</label>
+          <input id="password1" type="password" name="password" required class="input">
+          <div class="error errorPassword">Invalid password</div>
+
+          <label class="label">Підтвердження пароля</label>
+          <input id="password2" type="password" name="password" required class="input">
+          <div class="error errorPassword2">The password not the same</div>
+
+          <button type="submit" class="btn registration">Зареєструватись</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
